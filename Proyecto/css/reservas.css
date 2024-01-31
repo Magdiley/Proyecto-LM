@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin:0;
 }
 
 body{
@@ -13,8 +14,8 @@ body{
 }
 
 .calendario-contenedor{
-    width: 500vw;
-    max-width: 1200px;
+    width: 300vw;
+    max-width: 900px;
     background-color:beige;
     box-shadow:  0 2px 20px 0px;
     border-radius: 10px;
@@ -26,5 +27,52 @@ body{
 }
 
 .calendario-header{
+    text-align: center;
+    padding: 5px 0;
+    border-bottom:1px solid darkblue;
     
+}
+
+.calendario-header h1{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.calendario-header p{
+    font-size: 13px;
+    margin:5px;
+    font-weight: bold;
+}
+.calendario{
+  display: grid;
+  width:100%;
+  grid-template-columns: repeat(7,minmax(120px,1fr));
+  grid-template-rows: 50px;
+  grid-auto-rows: 120px;
+  }
+
+.num-dia{
+    text-align: right;
+    padding: 14px 20px;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    font-size: 16px;
+
+}
+.num-dia:nth-of-type(7n+7){
+    border-right: none; 
+
+}
+
+.nombreDia{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid grey;
+}
+
+.num-dia-mes{
+    color:grey;
+    cursor:not-allowed;
 }

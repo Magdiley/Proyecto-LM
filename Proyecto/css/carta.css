@@ -1,5 +1,40 @@
 *
 {
     margin: 0;
-    
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    max-width: 100vw;
+}
+header
+{
+    height: 25vh;
+    background-color: #730E16;
+}
+
+.navegacion
+{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navegacion:hover
+{
+    text-decoration: underline;
+}
+
+main
+{
+    height: 70vh;
+    background: url(..//img/vista-frontal-mujer-comiendo-sushi-california-rolls-jugo-sobre-mesa.jpg) no-repeat;
+    background-size: cover;
+}
+
+footer
+{
+    height: 15vh;
+    background-color: #F21D2F;
 }

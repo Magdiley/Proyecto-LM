@@ -10,26 +10,82 @@ body
 }
 header
 {
-    height: 25vh;
-    background-color: #730E16;
+    height: 20vh;
+    background-color: #ffffff;
+    display: flex;
+    border-bottom: 2px solid #F21D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+{
+    height: 18vh;
+    padding: 0;
 }
 
 .navegacion
 {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
+    justify-content: space-evenly;
+    gap: 2em;
+    padding: 0.8em;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: larger;
+    color: #F21D2F;
+    padding: 2em; 
+    font-family: "Kaushan Script", cursive;
 }
 
-.navegacion:hover
+li:hover
 {
-    text-decoration: underline;
+    text-decoration: underline; 
+    animation: moverTexto 1s;
+}
+
+.animacion:hover
+{
+    
+}
+
+@keyframes moverTexto
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    50%
+    {
+        transform: translateX(10px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}
+
+li
+{
+    display: inline-block;
+    border-right: 0.2em #000000 solid;
+    padding: 0.5em;
+    margin: 3em;
+}
+
+a
+{
+    padding: 10px 20px; 
+    border-radius: 5px;
+    text-decoration: none;
+    color: #F21D2F;
 }
 
 main
 {
     height: 70vh;
-    background: url(..//img/vista-frontal-mujer-comiendo-sushi-california-rolls-jugo-sobre-mesa.jpg) no-repeat;
+    background: url(..//img/asanoha-400px.png) no-repeat;
     background-size: cover;
 }
 
@@ -37,4 +93,28 @@ footer
 {
     height: 15vh;
     background-color: #F21D2F;
+}
+
+@media (max-width: 768px) 
+{
+    header 
+    {
+        height: 15vh;
+    }
+
+    .logo 
+    {
+        height: 15vh;
+    }
+
+    main 
+    {
+        height: 50vh;
+        background-image: url(..//img/asanoha-400px.png);
+    }
+
+    footer 
+    {
+        height: 10vh;
+    }
 }

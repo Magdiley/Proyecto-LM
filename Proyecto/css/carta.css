@@ -37,14 +37,14 @@ header
 .navegacion
 {
     display: flex;
-    justify-content: space-evenly;
+    justify-items: flex-start;
     gap: 2em;
     padding: 0.8em;
     list-style-type: none;
     font-weight: bold;
     font-size: larger;
     color: #F21D2F;
-    padding: 2em; 
+    padding: 1em; 
     font-family: "Kaushan Script", cursive;
     position: relative;
 }
@@ -92,6 +92,28 @@ main
     height: 70vh;
 }
 
+.carta
+{
+    padding: 2em;
+}
+
+.imagenes
+{
+    border-radius: 50%;
+    border: solid #F21D2F; 
+    width: 15vw;
+    height: 30vh;
+    transition:all .5s ease-in-out;
+}
+
+.imagenes:hover
+{
+    border: 0;
+    border-radius: 0;
+    transform: rotate(360deg);
+    transform: scale(1.1);
+}
+
 footer
 {
     position: relative;
@@ -116,6 +138,7 @@ p
 {
     font-size: larger;
 }
+
 
 @media (max-width: 768px) 
 {
@@ -144,10 +167,17 @@ header
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: rgba(94, 94, 94, 0.4);
-        width: 40vw;
+        background-color: rgba(242, 29, 47, 0.9);
+        width: 50vw;
         z-index: 999;
         flex-direction: column;
+        justify-content: center;
+        color: white;
+    }
+
+    a
+    {
+        color: rgb(0, 0, 0);
     }
 
     .navegacion li 
@@ -158,6 +188,27 @@ header
     .menuDesplegable:focus + #menu .navegacion 
     {
         display: flex;
+    }
+
+    .carta
+    {
+        padding: 2em;
+    }
+
+    .imagenes
+    {
+        border-radius: 50%;
+        border: solid #F21D2F;
+        height: auto;
+        transition:all .5s ease-in-out;
+    }
+
+    .imagenes:hover
+    {
+        border: 0;
+        border-radius: 0;
+        transform: rotate(360deg);
+        transform: scale(1.3);
     }
 
     footer 

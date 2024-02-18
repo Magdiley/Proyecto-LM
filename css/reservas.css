@@ -1,47 +1,175 @@
-*{
+* 
+{
+    margin: 0;
     box-sizing: border-box;
-    margin:0;
 }
 
-body{
-    background-color: white;
-    padding: 40px 0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+body 
+{
+    min-height: 100vh;
+    max-width: 100vw;
+    background: url(..//img/asanoha-400px.png) no-repeat;
+    background-size: cover;
 }
 
+header 
+{
+    height: 20vh;
+    background: rgb(210, 210, 210);
+    display: flex;
+    border-bottom: 2px solid #F21D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.logo 
+{
+    height: 18vh;
+    padding: 0;
+}
+
+.menuDesplegable 
+{
+    display: none;
+    cursor: pointer;
+}
+
+.navegacion 
+{
+    display: flex;
+    justify-items: flex-start;
+    gap: 2em;
+    padding: 0.8em;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: larger;
+    color: #F21D2F;
+    padding: 1em;
+    font-family: "Kaushan Script", cursive;
+    position: relative;
+}
+
+li:hover 
+{
+    text-decoration: underline;
+    animation: moverTexto 1s;
+}
+
+@keyframes moverTexto 
+{
+    0% 
+    {
+        transform: translateX(0);
+    }
+
+    50% 
+    {
+        transform: translateX(10px);
+    }
+
+    100% 
+    {
+        transform: translateX(0);
+    }
+}
+
+li 
+{
+    display: inline-block;
+    border-right: 0.2em #000000 solid;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+a 
+{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #F21D2F;
+}
+
+
+footer 
+{
+    position: relative;
+    height: 15vh;
+    background: rgba(156, 156, 156, 0.4);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    padding: 3.5em 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5em;
+    border-top: 2px solid #F21D2F;
+}
+
+footer > p 
+{
+    text-align: center;
+}
+
+.textoSuperior 
+{
+    font-size: larger;
+}
+.contenedor-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    
+}
 .calendario-header{
-    font-family: 'Original Surfer', sans-serif; 
+    font-family: 'Original Surfer', sans-serif;
+    background-color: #F21D2F;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom:1px solid black;
+
 }
+
 
 .calendario-contenedor{
-    width: 300vw;
+    
     max-width: 900px;
     background-color:beige;
     box-shadow:  0 2px 20px 0px;
     border-radius: 10px;
-    margin: 20px;
-    
+    margin-top: 151.5px;
+   
+
+
+
 
 
 
 }
 
-.calendario-header{
-    text-align: center;
-    padding: 5px 0;
-    border-bottom:1px solid darkblue;
-    
-}
+
+
+
 
 .calendario-header h1{
     font-size: 20px;
     margin-top: 15px;
+    font-family: "Kaushan Script", cursive;
+    
 }
+
 
 .calendario-header p{
     font-size: 13px;
     margin:5px;
     font-weight: bold;
+    font-family: "Kaushan Script", cursive;
 }
 .calendario{
   display: grid;
@@ -49,7 +177,11 @@ body{
   grid-template-columns: repeat(7,minmax(120px,1fr));
   grid-template-rows: 50px;
   grid-auto-rows: 120px;
+  background-color: rgb(210, 210, 210) ;
+  font-family: "Quicksand", sans-serif;
+  
   }
+
 
 .num-dia{
     text-align: right;
@@ -57,12 +189,16 @@ body{
     border-bottom: 1px solid grey;
     border-right: 1px solid grey;
     font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+
 
 }
 .num-dia:nth-of-type(7n+7){
-    border-right: none; 
+    border-right: none;
+
 
 }
+
 
 .nombreDia{
     font-size: 20px;
@@ -70,9 +206,292 @@ body{
     text-align: center;
     line-height: 50px;
     border-bottom: 1px solid grey;
+    font-family: "Quicksand", sans-serif;
 }
+
 
 .num-dia-mes{
     color:grey;
     cursor:not-allowed;
+}
+
+
+.num-dia-L:hover{
+ border: 3px solid rgb(242, 29, 47, 0.9);
+}
+.num-dia-V:hover{
+    border: 3px solid rgb(5, 233, 81);
+
+
+}
+.num-dia-M:hover{
+    border: 3px solid rgb(243, 190, 15);
+
+
+}
+.leyenda{
+    margin-top: 20px;
+    font-family: "Quicksand", sans-serif;
+
+}
+.estado{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+.verde{
+    background-color: #27ae60;
+}
+.naranja{
+    background-color: orange;
+}
+.rojo{
+    background-color: #F21D2F;
+}
+
+
+.container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: linear-gradient(0,0,0,0.5);
+}
+
+
+.container form{
+    padding: 20px;
+    width: 50vw;
+    background-color: #F21D2F;
+    box-shadow: 0 5px 10px rgb(210, 210, 210);
+    border-radius: 10px 15px;
+}
+
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+
+
+  .container form .row .col{
+    flex:1 1 250px;
+  }
+
+.titulo{
+    font-family: "Kaushan Script", cursive;
+    font-size: 20px;
+    color: black;
+  
+
+}
+
+
+.container form .row .col {
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-family: "Quicksand", sans-serif;
+  }
+
+
+  .container form .row .col .caja{
+    margin:15px 0;
+  }
+ 
+  .container form .row .col .caja span{
+    margin-bottom: 10px;
+    display: block;
+  }
+ 
+  .container form .row .col .caja input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+ 
+  .container form .row .col .caja input:focus{
+    border:1px solid #000;
+  }
+ 
+  .container form .row .col .fl-db{
+    display: flex;
+    gap:15px;
+  }
+ 
+  .container form .row .col .fl-db .caja{
+    margin-top: 5px;
+  }
+ 
+  .container form .row .col .caja img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+ 
+  .container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background:  rgb(210, 210, 210);
+    color:black;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Quicksand", sans-serif;
+  }
+ 
+  .container form .submit-btn:hover{
+    background:  rgb(210, 210, 210);
+  }
+
+  @media only screen and (min-width: 768px) and (max-width:1024)
+  {
+      header
+      {
+          height: auto;
+          align-items: center;
+      }
+  
+      .logo
+      {
+          height: 15vh;
+      }
+  
+      .navegacion
+      {
+          justify-content: center;
+      }
+  
+      li
+      {
+          display: block;
+          margin: 0.5em 0;
+      }
+
+      .contenedor-principal{
+        flex-direction: column;
+        align-items: center;
+      }
+      .calendario-contenedor{
+        width:1024px;
+        margin: 20px auto;
+
+      }
+  
+      .container{
+        width: 60%;
+        margin: 20px auto;
+
+      }
+      .calendario{
+        grid-template-columns: repeat(7,minmax(60px,1fr));
+      }
+      .nombreDia{
+        font-size: 16px;
+      }
+      .container form{
+        width: 100%;
+      }
+      .leyenda{
+        width: 1024px;;
+      }
+     
+  
+      
+  
+     
+  
+     
+      footer
+      {
+          padding: 2em;
+      }
+  }
+
+
+
+
+@media only screen and (max-width: 768px) 
+{
+    header 
+    {
+        height: auto;
+        align-items: center;
+    }
+
+    .logo 
+    {
+        height: 15vh;
+        margin-bottom: 1em;
+    }
+
+    .menuDesplegable 
+    {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .navegacion 
+    {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(242, 29, 47, 0.9);
+        width: 50vw;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+    }
+
+    a 
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    .navegacion li 
+    {
+        margin: 0.3em;
+    }
+
+    .menuDesplegable:focus + .menu .navegacion 
+    {
+        display: flex;
+    }
+
+    footer 
+    {
+        padding: 2em;
+    }
+   .calendario-contenedor{
+    width:575px;
+    margin-left: 30px;
+    
+   }
+   .calendario{
+    grid-template-columns: repeat(7,minmax(50px,1fr));
+    
+   }
+   .nombreDia{
+    font-size: 14px;
+   }
+
+
+
+  
+
+    .contenedor-principal{
+        flex-direction: column;
+        align-items: center;
+    }
 }

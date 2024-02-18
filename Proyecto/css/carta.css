@@ -8,8 +8,7 @@ body
 {
     min-height: 100vh;
     max-width: 100vw;
-    background: url(..//img/asanoha-400px.png) no-repeat;
-    background-size: cover;
+    background: url(..//img/background-logo/asanoha-400px.png) repeat;
 }
 
 header 
@@ -187,7 +186,7 @@ footer > p
     font-size: larger;
 }
 
-@media only screen and (min-width: 768px) and (max-width:1024)
+@media (min-width: 768px) and (max-width:1024)
 {
     header
     {
@@ -239,7 +238,9 @@ footer > p
         padding: auto;
         opacity: 1;
         transition: none;
+        animation: none;
     }
+
     footer
     {
         padding: 2em;
@@ -247,7 +248,7 @@ footer > p
 }
 
 
-@media only screen and (max-width: 768px) 
+@media (max-width: 768px) 
 {
     header 
     {
@@ -285,6 +286,7 @@ footer > p
     a 
     {
         color: rgb(0, 0, 0);
+        z-index: 1000;
     }
 
     .navegacion li 

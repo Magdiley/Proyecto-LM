@@ -160,16 +160,16 @@ h1{
     
 }
 .card1{
-    background-image: url(../img/menu-foto.png);
+    background-image: url(./img/menu-foto.png);
     
 
 }
 .card2{
-    background-image: url(../img/reservas.png);
+    background-image: url(./img/reservas.png);
 
 }
 .card3{
-    background-image: url(../img/galeria.png);
+    background-image: url(./img/galeria.png);
 }
 h5{
   color: #F21D2F;
@@ -209,7 +209,7 @@ footer > p
     max-width: 100vw;
     
     background-size: auto 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/Imagencentralindex.png);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./img/Imagencentralindex.png);
     background-position: center;
     background-size: cover;
 }

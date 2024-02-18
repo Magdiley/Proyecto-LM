@@ -1,40 +1,45 @@
-*
+* 
 {
     margin: 0;
     box-sizing: border-box;
 }
-body
+
+body 
 {
     min-height: 100vh;
     max-width: 100vw;
     background: url(..//img/asanoha-400px.png) no-repeat;
     background-size: cover;
 }
-header
+
+header 
 {
     height: 20vh;
-    background: rgba(156, 156, 156, 0.4);
+    background: rgb(210, 210, 210);
     display: flex;
     border-bottom: 2px solid #F21D2F;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 1000;
 }
 
-.logo
+.logo 
 {
     height: 18vh;
     padding: 0;
 }
 
-.menuDesplegable
+.menuDesplegable 
 {
     display: none;
     cursor: pointer;
 }
 
-.navegacion
+.navegacion 
 {
     display: flex;
     justify-items: flex-start;
@@ -44,77 +49,119 @@ header
     font-weight: bold;
     font-size: larger;
     color: #F21D2F;
-    padding: 1em; 
+    padding: 1em;
     font-family: "Kaushan Script", cursive;
     position: relative;
 }
 
-li:hover
+li:hover 
 {
-    text-decoration: underline; 
+    text-decoration: underline;
     animation: moverTexto 1s;
 }
 
-@keyframes moverTexto
+@keyframes moverTexto 
 {
-    0%
+    0% 
     {
         transform: translateX(0);
     }
-    50%
+
+    50% 
     {
         transform: translateX(10px);
     }
-    100%
+
+    100% 
     {
         transform: translateX(0);
     }
 }
 
-li
+li 
 {
     display: inline-block;
     border-right: 0.2em #000000 solid;
     padding: 0.5em;
-    margin: 3em;
+    margin: 1em;
 }
 
-a
+a 
 {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     color: #F21D2F;
 }
 
-main
+.carta-img 
 {
-    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    max-width: 70em;
+    margin: auto;
+    background: rgba(156, 156, 156, 0.4);
 }
 
-.carta
+.titulo 
 {
-    padding: 2em;
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    font-family: "Kaushan Script", cursive;
+    border-bottom: 2px solid #F21D2F;
+    width: 10em;
+    margin: 1em auto;
+}
+
+.descripcion
+{
+    display: grid;
+    margin: auto;
+    padding: 3em 3em;
+    width: 70em;
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    border-bottom: 2px solid #F21D2F;
+}
+
+.descripcion ~ .descripcion
+{
+    border: none;
 }
 
 .imagenes
 {
-    border-radius: 50%;
-    border: solid #F21D2F; 
-    width: 15vw;
+    position: relative;
+    width: 20vw;
     height: 30vh;
-    transition:all .5s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+    margin: auto;
+    transition: opacity 1.5s;
 }
 
-.imagenes:hover
+.nombre-plato
 {
-    border: 0;
-    border-radius: 0;
-    transform: rotate(360deg);
-    transform: scale(1.1);
+    display: flex;
+    justify-content: center;
+    font-family: "Kaushan Script", cursive;
+    margin: auto;
+    align-items: center;
+    margin-top: 1em;
 }
 
-footer
+.carta-img > .nombre-plato:hover + .imagenes
+{
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+footer 
 {
     position: relative;
     height: 15vh;
@@ -126,25 +173,85 @@ footer
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*background: rgba(242, 29, 47, 0.6);*/
+    margin-top: 5em;
+    border-top: 2px solid #F21D2F;
 }
 
-p
+footer > p 
 {
     text-align: center;
 }
 
-.textoSuperior
+.textoSuperior 
 {
     font-size: larger;
 }
 
-
-@media (max-width: 768px) 
+@media only screen and (min-width: 768px) and (max-width:1024)
 {
-header 
+    header
+    {
+        height: auto;
+        align-items: center;
+    }
+
+    .logo
     {
         height: 15vh;
+    }
+
+    .navegacion
+    {
+        justify-content: center;
+    }
+
+    li
+    {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .carta-img
+    {
+        max-width: 90%;
+    }
+
+    .titulo
+    {
+        width: auto;
+        margin: 1em 0;
+    }
+
+    .descripcion
+    {
+        width: 90%;
+        margin: auto;
+        padding: auto;
+        font-size: 0.8em;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .imagenes
+    {
+        width: 80%;
+        margin: auto;
+        padding: auto;
+        opacity: 1;
+        transition: none;
+    }
+    footer
+    {
+        padding: 2em;
+    }
+}
+
+
+@media only screen and (max-width: 768px) 
+{
+    header 
+    {
+        height: auto;
         align-items: center;
     }
 
@@ -161,7 +268,7 @@ header
         cursor: pointer;
     }
 
-    .navegacion
+    .navegacion 
     {
         display: none;
         position: absolute;
@@ -175,7 +282,7 @@ header
         color: white;
     }
 
-    a
+    a 
     {
         color: rgb(0, 0, 0);
     }
@@ -185,45 +292,38 @@ header
         margin: 0.3em;
     }
 
-    .menuDesplegable:focus + #menu .navegacion 
+    .menuDesplegable:focus + .menu .navegacion 
     {
         display: flex;
     }
 
-    .carta
+    .titulo 
     {
+        width: 10em;
+        margin-top: 1em;
+    }
+
+    .carta-img 
+    {
+        max-width: 90%;
+    }
+
+    .descripcion
+    {
+        width: 90%;
         padding: 2em;
     }
 
-    .imagenes
+    .imagenes 
     {
-        border-radius: 50%;
-        border: solid #F21D2F;
-        height: auto;
-        transition:all .5s ease-in-out;
-    }
-
-    .imagenes:hover
-    {
-        border: 0;
-        border-radius: 0;
-        transform: rotate(360deg);
-        transform: scale(1.3);
+        width: 80%;
+        margin: 0 auto;
+        animation: none;
+        opacity: 1;
     }
 
     footer 
     {
-        height: 10vh;
-    }
-
-    p
-    {
-        font-size: small;
-        text-align: center;
-    }
-
-    .textoSuperior
-    {
-        font-size: medium;
+        padding: 2em;
     }
 }

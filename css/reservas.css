@@ -8,7 +8,7 @@ body
 {
     min-height: 100vh;
     max-width: 100vw;
-    background: url(./background-logo/asanoha-400px.png) no-repeat;
+    background: url(..//background-logo/asanoha-400px.png) no-repeat;
     background-size: cover;
 }
 

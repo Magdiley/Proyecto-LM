@@ -225,7 +225,6 @@ footer > p
     {
         width: 90%;
         margin: auto;
-        padding: auto;
         font-size: 0.8em;
         line-height: 1.4;
         text-align: center;
@@ -235,7 +234,6 @@ footer > p
     {
         width: 80%;
         margin: auto;
-        padding: auto;
         opacity: 1;
         transition: none;
         animation: none;
